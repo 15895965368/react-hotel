@@ -5,13 +5,19 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import store from './store'
 import App from './App'
+import Main from './page/front/main'
+import NoFound from './component/noFound'
+import './assets/css/animate.css'
+import './assets/css/index.css'
 
 ReactDOM.render(
     <Provider store={store}>
         <HashRouter>
             <Switch>
-                <Route exact path="/" render={() => <Redirect to="/app/index"></Redirect>}></Route>
-                <Route path="/app" component={App}></Route>
+                <Route exact path="/" render={() => <Redirect to="/back/index"></Redirect>}></Route>
+                <Route path="/front" component={Main}></Route>
+                <Route path="/back" component={App}></Route>
+                <Route component={NoFound}/>
             </Switch>
         </HashRouter>
     </Provider>,

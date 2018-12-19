@@ -6,13 +6,25 @@ import './util/http'
 
 
 class App extends Component {
-  render() {
-    return (
-        <Layout>
-          1111
-        </Layout>
-    );
-  }
+    constructor(props){
+        super(props)
+        this.state = {
+            collapsed: false
+        }
+    }
+    toggle(){
+        this.setState({
+            collapsed: !this.state.collapsed
+        })
+    }
+
+    render() {
+        return (
+            <Layout>
+              1111
+            </Layout>
+        );
+    }
 }
 
 export default App;
