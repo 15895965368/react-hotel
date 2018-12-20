@@ -21,8 +21,8 @@ class App extends Component {
     render() {
         const { Sider, Header, Content, Footer } = Layout
         return (
-            <Layout>
-                <Sider><Button type="primary">Primary</Button></Sider>
+            <Layout style={{height: '100%'}}>
+                <Sider></Sider>
                 <Layout>
                     <Header>11111</Header>
                     <Content>111</Content>

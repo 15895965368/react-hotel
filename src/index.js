@@ -9,7 +9,6 @@ import Main from './page/front/main'
 import NoFound from './component/noFound'
 import Login from './page/back/login'
 import './util/http'
-import 'antd/dist/antd.css';
 import './assets/css/animate.css'
 import './assets/css/index.css'
 
