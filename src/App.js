@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Layout, notification, Icon } from 'antd';
-import './util/http'
+import { Layout, notification, Icon, Button } from 'antd';
+import * as config from './util/config'
 
 
 class App extends Component {
@@ -19,9 +19,15 @@ class App extends Component {
     }
 
     render() {
+        const { Sider, Header, Content, Footer } = Layout
         return (
             <Layout>
-              1111
+                <Sider><Button type="primary">Primary</Button></Sider>
+                <Layout>
+                    <Header>11111</Header>
+                    <Content>111</Content>
+                    <Footer style={{textAlign: 'center'}}>React Hotel@{config.year} Created By {config.username}</Footer>
+                </Layout>
             </Layout>
         );
     }
